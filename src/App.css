@@ -1,0 +1,244 @@
+/* App.css */
+:root {
+  /* --primary: #6e42ff; */
+  --primary: #ffd000;
+
+  --primary-dark: #5232d3;
+  --secondary: #ff5b94;
+  --background: #0a0a1a;
+  --background-light: #13132d;
+  --text: #f0f0f5;
+  --text-muted: #9ea4c9;
+  --border: #222244;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+.app{
+  width: 100vw;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 1s ease;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.highlight {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientShift 8s infinite alternate;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: white;
+  box-shadow: 0 4px 20px rgba(110, 66, 255, 0.3);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(110, 66, 255, 0.4);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--primary);
+  box-shadow: 0 4px 20px rgba(110, 66, 255, 0.1);
+}
+
+.secondary-btn:hover {
+  background: rgba(110, 66, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(110, 66, 255, 0.2);
+}
+
+/* Animations */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.glow {
+  position: relative;
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(110, 66, 255, 0.5);
+}
+
+/* Button glow effect */
+.btn-glow {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  left: -30px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: btn-glow 2s infinite;
+  transform: skewX(-20deg);
+}
+
+@keyframes btn-glow {
+  0% {
+    left: -30px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+/* Font for icon placeholders - replace with actual icon font in production */
+@font-face {
+  font-family: 'Icons';
+  src: url('path-to-your-icon-font.woff2') format('woff2');
+}
+
+/* Icon placeholders - for demo purposes */
+[class^="icon-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+}
+
+.icon-code:before { content: '⌨️'; }
+.icon-smartphone:before { content: '📱'; }
+.icon-bar-chart:before { content: '📊'; }
+.icon-layers:before { content: '📚'; }
+.icon-map-pin:before { content: '📍'; }
+.icon-mail:before { content: '📧'; }
+.icon-phone:before { content: '📞'; }
+.icon-facebook:before { content: 'f'; }
+.icon-twitter:before { content: 't'; }
+.icon-instagram:before { content: 'i'; }
+.icon-linkedin:before { content: 'l'; }
+.icon-github:before { content: 'g'; }
+
+/* Media Queries */
+@media (max-width: 992px) {
+  section {
+    padding: 80px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 50px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+}

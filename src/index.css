@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+h1{
+  font-family: 'Orbitron',sans-serif;
+}
+
+h2{
+  font-family: 'Orbitron',sans-serif;
+}
+
+h3{
+  font-family: 'Orbitron',sans-serif;
+}
+
+p{
+  font-family: 'Rajdhani',sans-serif;
+}
+
+button{
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Ensures compatibility */
+  color: transparent;
+  animation: gradientShift 8s infinite alternate;
+}
+
+.gradient-text2 {
+  background: linear-gradient(90deg,#ffffff,#c4ff01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Ensures compatibility */
+  color: transparent;
+  animation: gradientShift 8s infinite alternate;
+}
