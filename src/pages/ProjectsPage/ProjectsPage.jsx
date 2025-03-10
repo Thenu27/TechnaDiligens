@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ProjectsPage.css';
+import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectsPage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -21,10 +23,10 @@ const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
-      title: "Quantum E-Commerce Platform",
-      category: "e-commerce",
+      title: "Chat-App",
+      category: "Business Website.",
       description: "A revolutionary online shopping experience with AR product visualization and AI-powered recommendations.",
-      image: "/api/placeholder/600/400",
+      image: "/src/assets/ChatApp.png",
       client: "FutureRetail Inc.",
       technologies: ["React", "Node.js", "MongoDB", "WebGL", "TensorFlow"],
       results: {
@@ -36,10 +38,10 @@ const ProjectsPage = () => {
     },
     {
       id: 2,
-      title: "NexusHub Social Media App",
-      category: "mobile",
-      description: "A next-generation social platform focused on authentic connection and wellness with advanced privacy controls.",
-      image: "/api/placeholder/600/400",
+      title: "MONALI TRADERS",
+      category: "Business Website.",
+      description: "A Company specializing in the import and distribution of Ariel bundles, cable accessories, and electrical fittings.",
+      image: "/src/assets/MonaliProject.png",
       client: "ConnectWell Technologies",
       technologies: ["React Native", "GraphQL", "Firebase", "Redux", "AWS"],
       results: {
@@ -51,10 +53,10 @@ const ProjectsPage = () => {
     },
     {
       id: 3,
-      title: "FinEdge Banking Dashboard",
-      category: "web",
+      title: "Real Estate",
+      category: "Web Design",
       description: "A comprehensive financial management system with real-time analytics and predictive insights.",
-      image: "/api/placeholder/600/400",
+      image: "/src/assets/RealEstate.png",
       client: "GlobalBank Financial",
       technologies: ["Angular", "Node.js", "PostgreSQL", "D3.js", "WebSockets"],
       results: {
@@ -63,50 +65,50 @@ const ProjectsPage = () => {
         operationalEfficiency: "+53%"
       },
       featured: true
-    },
-    {
-      id: 4,
-      title: "TerraVista Travel Platform",
-      category: "web",
-      description: "An immersive travel discovery platform with personalized itineraries and virtual destination previews.",
-      image: "/api/placeholder/600/400",
-      client: "Nomad Ventures",
-      technologies: ["Vue.js", "Django", "PostgreSQL", "Three.js"],
-      results: {
-        bookingConversions: "+41%",
-        returnVisitors: "+52%",
-        averageSessionTime: "15:27"
-      }
-    },
-    {
-      id: 5,
-      title: "PulseHealth Monitoring App",
-      category: "mobile",
-      description: "A comprehensive health tracking application with wearable device integration and medical professional connectivity.",
-      image: "/api/placeholder/600/400",
-      client: "MediTech Innovations",
-      technologies: ["Flutter", "Firebase", "Swift", "TensorFlow Lite"],
-      results: {
-        userAdherence: "+74%",
-        dataAccuracy: "+68%",
-        userRetention: "+59%"
-      }
-    },
-    {
-      id: 6,
-      title: "CloudScale Analytics Platform",
-      category: "enterprise",
-      description: "Enterprise-grade data analytics platform with real-time processing and intuitive visualization tools.",
-      image: "/api/placeholder/600/400",
-      client: "DataStream Corp",
-      technologies: ["React", "Python", "Apache Kafka", "Elasticsearch", "Docker"],
-      results: {
-        dataProcessingSpeed: "+829%",
-        decisionMakingTime: "-67%",
-        costReduction: "42%"
-      },
-      featured: true
     }
+    // {
+    //   id: 4,
+    //   title: "Real Estate",
+    //   category: "Business Website",
+    //   description: "An immersive travel discovery platform with personalized itineraries and virtual destination previews.",
+    //   image: "/src/assets/RealEstate.png",
+    //   client: "Nomad Ventures",
+    //   technologies: ["Vue.js", "Django", "PostgreSQL", "Three.js"],
+    //   results: {
+    //     bookingConversions: "+41%",
+    //     returnVisitors: "+52%",
+    //     averageSessionTime: "15:27"
+    //   }
+    // },
+    // {
+    //   id: 5,
+    //   title: "PulseHealth Monitoring App",
+    //   category: "mobile",
+    //   description: "A comprehensive health tracking application with wearable device integration and medical professional connectivity.",
+    //   image: "/api/placeholder/600/400",
+    //   client: "MediTech Innovations",
+    //   technologies: ["Flutter", "Firebase", "Swift", "TensorFlow Lite"],
+    //   results: {
+    //     userAdherence: "+74%",
+    //     dataAccuracy: "+68%",
+    //     userRetention: "+59%"
+    //   }
+    // },
+    // {
+    //   id: 6,
+    //   title: "CloudScale Analytics Platform",
+    //   category: "enterprise",
+    //   description: "Enterprise-grade data analytics platform with real-time processing and intuitive visualization tools.",
+    //   image: "/api/placeholder/600/400",
+    //   client: "DataStream Corp",
+    //   technologies: ["React", "Python", "Apache Kafka", "Elasticsearch", "Docker"],
+    //   results: {
+    //     dataProcessingSpeed: "+829%",
+    //     decisionMakingTime: "-67%",
+    //     costReduction: "42%"
+    //   },
+    //   featured: true
+    // }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -116,6 +118,13 @@ const ProjectsPage = () => {
   const scrollToProjects = () => {
     projectsRef.current.scrollIntoView({ behavior: 'smooth' });
   };
+
+  
+  const navigate = useNavigate();
+  const goToContact =()=>{
+    navigate('/contact');
+    window.scrollTo(0,0)
+  }
 
   return (
     <div className="projects-container">
@@ -128,7 +137,7 @@ const ProjectsPage = () => {
       />
 
       <div className="projects-hero">
-        <h1>Our <span className="gradient-text">Projects</span></h1>
+        <h1 className='project-hero-title'>Our <span className="gradient-text">Projects</span></h1>
         <p className="subtitle">Innovative solutions for forward-thinking clients</p>
         <div className="hero-description">
           <p>We transform complex challenges into elegant digital experiences. Each project represents our commitment to excellence, innovation, and client success.</p>
@@ -298,7 +307,7 @@ const ProjectsPage = () => {
         <div className="cta-content">
           <h2>Ready to Build Something Amazing?</h2>
           <p>Let's collaborate to create a digital solution that drives your business forward.</p>
-          <button className="cta-button">Start Your Project</button>
+          <button onClick={goToContact} className="cta-button">Start Your Project</button>
         </div>
         <div className="cta-decoration"></div>
       </div>

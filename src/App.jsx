@@ -6,6 +6,8 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
 import Navbar from './components/NavBar/NavBar';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   useEffect(() => {
@@ -37,8 +39,9 @@ const App = () => {
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/services' element={<ServicesPage/>}/>
         <Route path='/work' element={<ProjectsPage/>}/>
-
+        <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 };

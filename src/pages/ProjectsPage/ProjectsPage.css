@@ -121,6 +121,25 @@ body {
     margin-top: -40px;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects-hero,.featured-projects,cta-section{
+  animation: fadeUp 0.8s forwards;
+  
+}
+
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .projects-hero h1 {
@@ -223,6 +242,8 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(108, 99, 255, 0.3);
 }
+
+
 
 /* Cursor Follower */
 /* .cursor-follower {

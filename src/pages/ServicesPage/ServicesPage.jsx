@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ServicesPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesPage = () => {
   const [activeService, setActiveService] = useState(null);
@@ -30,7 +31,7 @@ const ServicesPage = () => {
       color: "#6C63FF",
       extendedInfo: {
         subservices: ["UI/UX Research", "Wireframing", "Prototype Design", "Responsive Layouts"],
-        tools: ["Figma", "Adobe XD", "Sketch", "InVision"]
+        tools: ["Figma"]
       }
     },
     {
@@ -51,43 +52,43 @@ const ServicesPage = () => {
       icon: "◎",
       color: "#FF5722",
       extendedInfo: {
-        subservices: ["Store Setup", "Payment Integration", "Inventory Systems", "Sales Analytics"],
-        tools: ["Shopify", "WooCommerce", "Stripe", "PayPal", "Custom Solutions"]
+        subservices: ["Store Setup", "Payment Integration", "Inventory Systems"],
+        tools: ["React", "Node.js", "MongoDB", "Stripe"]
       }
     },
     {
       id: 4,
-      title: "Mobile App Development",
-      description: "Native and cross-platform applications that deliver exceptional user experiences across all devices. Performance-optimized and feature-rich mobile solutions.",
+      title: "Portfolio Development",
+      description: "custom portfolio website development to help individuals and businesses showcase their work professionally. Whether you’re a freelancer, designer, developer, or business owner, a well-crafted portfolio enhances your online presence and credibility.",
       icon: "⬡",
       color: "#2196F3",
       extendedInfo: {
-        subservices: ["iOS Development", "Android Development", "Cross-platform Apps", "App Store Optimization"],
-        tools: ["React Native", "Flutter", "Swift", "Kotlin"]
+        subservices: ["Custom Design", "Mobile-Friendly Design", "Contact & Inquiry Forms", "Easy Content Management"],
+        tools: ["React", "Node.js", "Bootstrap", "Tailwind"]
       }
     },
     {
       id: 5,
-      title: "API Integration",
-      description: "Seamless connections between your platforms and third-party services. Custom API development and integration to enhance functionality and automate workflows.",
+      title: "Hosting and Deployment",
+      description: "We provide professional hosting and deployment services for all types of websites.Whether you need a simple static site or a scalable full-stack solution, We ensure secure, fast, and reliable hosting with seamless deployment.",
       icon: "⟡",
       color: "#9C27B0",
       extendedInfo: {
-        subservices: ["RESTful API Design", "Third-party Integrations", "Webhooks", "Microservices"],
-        tools: ["REST", "GraphQL", "OAuth", "AWS Lambda"]
+        subservices: ["PM2 & Nginx Setup", "SSL Security & Domain Setup", "Database Hosting", "Microservices"],
+        tools: ["Hostinger VPS ", "Digital Ocean", "Vercel"]
       }
     },
-    {
-      id: 6,
-      title: "Performance Optimization",
-      description: "Speed up your digital presence. We analyze, refine, and enhance your existing applications to deliver lightning-fast experiences that boost conversion rates.",
-      icon: "◈",
-      color: "#FFC107",
-      extendedInfo: {
-        subservices: ["Speed Testing", "Code Refactoring", "Database Optimization", "Caching Strategies"],
-        tools: ["Lighthouse", "WebPageTest", "Chrome DevTools", "Redis"]
-      }
-    }
+    // {
+    //   id: 6,
+    //   title: "Performance Optimization",
+    //   description: "Speed up your digital presence. We analyze, refine, and enhance your existing applications to deliver lightning-fast experiences that boost conversion rates.",
+    //   icon: "◈",
+    //   color: "#FFC107",
+    //   extendedInfo: {
+    //     subservices: ["Speed Testing", "Code Refactoring", "Database Optimization", "Caching Strategies"],
+    //     tools: ["Lighthouse", "WebPageTest", "Chrome DevTools", "Redis"]
+    //   }
+    // }
   ];
 
   const testimonials = [
@@ -114,6 +115,11 @@ const ServicesPage = () => {
     }
   ];
 
+  const navigate = useNavigate();
+  const goToContact =()=>{
+    navigate('/contact');
+    window.scrollTo(0,0)
+  }
   return (
     <div className="services-container">
       <div 
@@ -229,7 +235,7 @@ const ServicesPage = () => {
         <div className="cta-content">
           <h2>Ready to <span className='gradient-text'>Transform Your Digital</span> Presence?</h2>
           <p>Let's collaborate to create exceptional digital experiences that drive growth and engagement.</p>
-          <button className="cta-button">Get in Touch</button>
+          <button onClick={goToContact} className="cta-button">Get in Touch</button>
         </div>
         <div className="cta-decoration"></div>
       </div>

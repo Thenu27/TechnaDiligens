@@ -23,6 +23,12 @@ const Navbar = () => {
     window.scrollTo(0,0)
   }
 
+  const goToContact=()=>{
+    navigate('/contact')
+        window.scrollTo(0,0)
+
+  }
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -53,11 +59,11 @@ const Navbar = () => {
         </div>
         
         <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
-          <li className="nav-item"><a href="#home" onClick={() => {setMenuOpen(false),goToHome()}}>Home</a></li>
-          <li className="nav-item"><a href="#services" onClick={() => {setMenuOpen(false), goToServices()}}>Services</a></li>
-          <li className="nav-item"><a href="#portfolio" onClick={() => {setMenuOpen(false), goToProjects()}}>Work</a></li>
-          <li className="nav-item"><a href="#testimonials" onClick={() => setMenuOpen(false)}>Clients</a></li>
-          <li className="nav-item"><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          <li className="nav-item"><a  onClick={() => {setMenuOpen(false),goToHome()}}>Home</a></li>
+          <li className="nav-item"><a  onClick={() => {setMenuOpen(false), goToServices()}}>Services</a></li>
+          <li className="nav-item"><a  onClick={() => {setMenuOpen(false), goToProjects()}}>Work</a></li>
+          
+          <li className="nav-item"><a   onClick={() => {setMenuOpen(false), goToContact()}}>Contact</a></li>
         </ul>
       </div>
     </nav>

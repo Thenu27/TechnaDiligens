@@ -51,8 +51,8 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <div className="section-container">
-        <div className="section-header animate">
+      <div className="section-container animate">
+        <div className="section-header ">
           <h2>Get in <span className="highlight">Touch</span></h2>
           <p>Have a project in mind? Let's discuss how we can help</p>
         </div>

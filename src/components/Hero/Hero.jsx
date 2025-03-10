@@ -1,5 +1,6 @@
 // components/Hero.js
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -75,6 +76,16 @@ const Hero = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const navigate = useNavigate();
+  const goToProjects =()=>{
+    navigate('/work')
+  }
+
+  const goToContacts =()=>{
+    navigate('/contact')
+  }
+
+
   return (
     <section id="home" className="hero">
       <canvas id="particle-canvas"></canvas>
@@ -86,8 +97,8 @@ const Hero = () => {
           </h1>
           <p className='hero-description'>Cutting-edge web solutions for forward-thinking businesses</p>
           <div className="hero-buttons">
-            <button className="btn primary-btn hero-btn">Our Work</button>
-            <button className="btn secondary-btn hero-btn">Get in Touch</button>
+            <button onClick={goToProjects} className="btn primary-btn hero-btn">Our Work</button>
+            <button onClick={goToContacts} className="btn secondary-btn hero-btn">Get in Touch</button>
           </div>
         </div>
       </div>
