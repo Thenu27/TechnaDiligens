@@ -99,10 +99,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import './InfoSection.css';
-import img1 from '../../assets/99fe97fbf7ad5ea0be3f3089e46349b3 2-min.png';
-import img2 from '../../assets/Stunning-pic.png';
-import img3 from '../../assets/laptop.png';
-import img4 from '../../assets/Lightning.png';
+import img1 from '/99fe97fbf7ad5ea0be3f3089e46349b3 2-min.png';
+import img2 from '/Stunning-pic.png';
+import img3 from '/laptop.png';
+import img4 from '/Lightning.png';
 
 const InfoSection = () => {
   const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
