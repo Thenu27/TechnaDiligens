@@ -1,8 +1,26 @@
 // components/Footer.js
 import React from 'react';
 import './Footer.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const Footer = () => {
+
+  const navigate = useNavigate();
+  const goToServices =()=>{
+    navigate('/services');
+    window.scrollTo(0,0);
+  }
+
+  const goToWork =()=>{
+    navigate('/work');
+    window.scrollTo(0,0);
+  }
+
+  const goToContact =()=>{
+    navigate('/contact');
+    window.scrollTo(0,0);
+  }
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -37,20 +55,20 @@ const Footer = () => {
             <div className="footer-link-group">
               <h3>Services</h3>
               <ul>
-                <li><a href="#services">Web Development</a></li>
-                <li><a href="#services">Mobile Apps</a></li>
-                <li><a href="#services">E-commerce</a></li>
-                <li><a href="#services">UI/UX Design</a></li>
+                <li><a  onClick={goToServices}>Web Development</a></li>
+                <li><a  onClick={goToServices}>UI/UX Design</a></li>
+                <li><a  onClick={goToServices}>E-commerce</a></li>
+                <li><a  onClick={goToServices}>Portfolio Development</a></li>
+                <li><a  onClick={goToServices}>Hosting and Deployment</a></li>
+
               </ul>
             </div>
             
             <div className="footer-link-group">
               <h3>Company</h3>
               <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#portfolio">Our Work</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a onClick={goToWork}>Our Work</a></li>
+                <li><a onClick={goToContact}>Contact</a></li>
               </ul>
             </div>
             
@@ -59,8 +77,6 @@ const Footer = () => {
               <ul>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#career">Careers</a></li>
-                <li><a href="#privacy">Privacy Policy</a></li>
               </ul>
             </div>
           </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import './Services.css';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+
   const services = [
     {
       id: 1,
@@ -45,7 +47,7 @@ const Services = () => {
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <a href="#contact" className="learn-more">
+              <a  className="learn-more">
                 Learn More
                 <span className="arrow">→</span>
               </a>
