@@ -26,7 +26,7 @@ const ProjectsPage = () => {
       title: "Chat-App",
       category: "Business Website.",
       description: "A revolutionary online shopping experience with AR product visualization and AI-powered recommendations.",
-      image: "/src/assets/ChatApp.png",
+      image: "ChatApp.png",
       client: "FutureRetail Inc.",
       technologies: ["React", "Node.js", "MongoDB", "WebGL", "TensorFlow"],
       results: {
@@ -41,7 +41,7 @@ const ProjectsPage = () => {
       title: "MONALI TRADERS",
       category: "Business Website.",
       description: "A Company specializing in the import and distribution of Ariel bundles, cable accessories, and electrical fittings.",
-      image: "/assets/MonaliProject.png",
+      image: "/MonaliProject.png",
       client: "ConnectWell Technologies",
       technologies: ["React Native", "GraphQL", "Firebase", "Redux", "AWS"],
       results: {
@@ -56,7 +56,7 @@ const ProjectsPage = () => {
       title: "Real Estate",
       category: "Web Design",
       description: "A comprehensive financial management system with real-time analytics and predictive insights.",
-      image: "/src/assets/RealEstate.png",
+      image: "/RealEstate.png",
       client: "GlobalBank Financial",
       technologies: ["Angular", "Node.js", "PostgreSQL", "D3.js", "WebSockets"],
       results: {
