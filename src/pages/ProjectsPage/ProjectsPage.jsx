@@ -41,7 +41,7 @@ const ProjectsPage = () => {
       title: "MONALI TRADERS",
       category: "Business Website.",
       description: "A Company specializing in the import and distribution of Ariel bundles, cable accessories, and electrical fittings.",
-      image: "/src/assets/MonaliProject.png",
+      image: "/assets/MonaliProject.png",
       client: "ConnectWell Technologies",
       technologies: ["React Native", "GraphQL", "Firebase", "Redux", "AWS"],
       results: {
