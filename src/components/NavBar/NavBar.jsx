@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <div className="logo">
+        <div onClick={()=>goToHome()} className="logo">
           <span className="glow">Techna</span>Diligens
         </div>
         
