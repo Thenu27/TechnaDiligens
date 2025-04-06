@@ -27,13 +27,13 @@ body {
   position: relative;
   width: 100vw;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .services-header {
   margin-bottom: 4rem;
   position: relative;
-  z-index: 2;
+  z-index: 2; 
   text-align: center;
 }
 
@@ -473,12 +473,12 @@ body {
 
 /* Background Effects */
 .background-grid {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  /* z-index: 1; */
   overflow: hidden;
 }
 

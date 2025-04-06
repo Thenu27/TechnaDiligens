@@ -1,6 +1,6 @@
 import React from 'react';
 import './Services.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Services = () => {
 
@@ -47,10 +47,10 @@ const Services = () => {
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <a  className="learn-more">
+              <Link to='/services' className="learn-more">
                 Learn More
                 <span className="arrow">→</span>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

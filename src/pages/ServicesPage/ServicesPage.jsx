@@ -8,6 +8,10 @@ const ServicesPage = () => {
   const [expandedInfo, setExpandedInfo] = useState(null);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -122,13 +126,6 @@ const ServicesPage = () => {
   }
   return (
     <div className="services-container">
-      <div 
-        className="cursor-follower" 
-        style={{ 
-          left: `${mousePosition.x}px`, 
-          top: `${mousePosition.y}px` 
-        }} 
-      />
 
       <div className="services-header">
         <h1>Our <span className="gradient-text">Services</span></h1>
