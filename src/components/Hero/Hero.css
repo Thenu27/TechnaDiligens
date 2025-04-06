@@ -1,7 +1,7 @@
 /* Hero.css */
 .hero {
     /* height: 90vh; */
-    min-height: 730px;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
