@@ -33,6 +33,7 @@
     letter-spacing: -0.5px;
     font-family: 'Orbitron',sans-serif;
     position: relative;
+    cursor: pointer;
   }
   
   .nav-menu {

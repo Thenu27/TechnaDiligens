@@ -119,6 +119,7 @@
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
+    cursor: pointer;
   }
   
   .footer-link-group ul li a:hover {
