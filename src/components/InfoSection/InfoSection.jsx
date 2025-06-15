@@ -5,10 +5,12 @@ import img1 from '/99fe97fbf7ad5ea0be3f3089e46349b3 2-min.png';
 import img2 from '/Stunning-pic.png';
 import img3 from '/laptop.png';
 import img4 from '/Lightning.png';
+import img5 from '/ChatApp.png'
 import { useNavigate } from 'react-router-dom';
-
+import Cube from '../Cube/Cube';
+import Experience from '../Experience/Experience';
 const InfoSection = () => {
-  const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+  const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null),useRef(null)];
   
   useEffect(() => {
     const observers = sectionRefs.map(ref => {
@@ -70,6 +72,12 @@ const InfoSection = () => {
       description: "In today’s fast-paced digital world, website performance is critical for user experience, SEO rankings, and conversion rates. A slow-loading website can lead to high bounce rates, lower engagement, and lost revenue. Our performance optimization services ensure that your website runs efficiently, loads quickly, and delivers a seamless experience across all devices.",
       image: img4,
       direction: "right"
+    },
+    {
+      title: "3D Model Development",
+      description: "We specialize in creating low-poly 3D models that are fully optimized for the web. Our models are lightweight, fast-loading, and perfect for websites, apps, and interactive experiences—ensuring smooth performance without compromising on visual quality.",
+      image: img5,
+      direction: "left"
     }
   ];
   
@@ -88,7 +96,11 @@ const InfoSection = () => {
               <button onClick={goToServices} className="learn-more-btn">Learn More</button>
             </div>
             <div className="image-container">
-              <img src={section.image} alt={section.title} />
+                {section.title === "3D Model Development" ? (
+                  <Experience />
+                ) : (
+                  <img src={section.image} alt={section.title} />
+                )}
             </div>
           </div>
         </div>

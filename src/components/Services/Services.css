@@ -2,6 +2,7 @@
     background-color: var(--background-light);
     background-color: black;
     position: relative;
+    margin-top: -100px;
   }
   
   .services::before {

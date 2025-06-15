@@ -1,0 +1,44 @@
+.cube-model {
+    width: min(500px, 90vw);
+    height: min(500px, 90vw);
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    .cube-model {
+        width: min(300px, 85vw);
+        height: min(300px, 85vw);
+        border-width: 1px;
+    }
+}
+
+/* Small tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .cube-model {
+        width: min(400px, 80vw);
+        height: min(400px, 80vw);
+    }
+}
+
+/* Large tablets and small desktops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .cube-model {
+        width: min(450px, 75vw);
+        height: min(450px, 75vw);
+    }
+}
+
+/* Large screens (1025px and up) */
+@media screen and (min-width: 1025px) {
+    .cube-model {
+        width: 500px;
+        height: 500px;
+    }
+}
