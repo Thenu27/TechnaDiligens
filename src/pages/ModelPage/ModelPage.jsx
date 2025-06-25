@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './ProjectsPage.css';
+import './ModelPage.css'
 import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ProjectModel from '../../components/ProjectModel/ProjectModel';
 import { useContext } from 'react';
 import { ModelContext } from '../../Context/ModelContext';
+import ModelBox from '../../components/ModelBox/ModelBox';
 
-const ProjectsPage = () => {
+const ModelPage = () => {
   // const [activeProject, setActiveProject] = useState(null);
 
   const {model,setModel} = useContext(ModelContext)
@@ -16,32 +17,17 @@ const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
-      title: "Chat-App",
-      category: "Web Design",
+      title: "Three Legged Robot",
+      category: "Model",
       description: "A revolutionary online shopping experience with AR product visualization and AI-powered recommendations.",
-      image: "ChatApp.png",
+      image: "/Three-legged-Robot.png",
     },
     {
       id: 2,
-      title: "MONALI TRADERS",
-      category: "Business Website.",
+      title: "Red Car Model",
+      category: "Model",
       description: "A Company specializing in the import and distribution of Ariel bundles, cable accessories, and electrical fittings.",
-      image: "/MonaliProject.png",
-    },
-    {
-      id: 3,
-      title: "Real Estate",
-      category: "Web Design",
-      description: "A comprehensive financial management system with real-time analytics and predictive insights.",
-      image: "/RealEstate.png",
-    },
-
-        {
-      id: 4,
-      title: "Travel Jaya",
-      category: "Travel Agency Website",
-      description: "A comprehensive financial management system with real-time analytics and predictive insights.",
-      image: "/TravelJaya.png",
+      image: "/red-car-model.png",
     }
   ];
 
@@ -65,10 +51,10 @@ const ProjectsPage = () => {
     <div className="projects-container">
 
       <div className="projects-hero">
-        <h1 className='project-hero-title'>Our <span className="gradient-text">Projects</span></h1>
-        <p className="subtitle">Innovative solutions for forward-thinking clients</p>
+        <h1 className='project-hero-title'>Our <span className="gradient-text">3D Models</span></h1>
+        <p className="subtitle">Bringing Innovation to Life</p>
         <div className="hero-description">
-          <p>We transform complex challenges into elegant digital experiences. Each project represents our commitment to excellence, innovation, and client success.</p>
+          <p>We create low-poly 3D models tailored for real-time web experiences. Every asset is carefully crafted for fast loading, seamless interaction, and smooth performance — perfect for websites and online platforms</p>
         </div>
 
       </div>
@@ -88,7 +74,7 @@ const ProjectsPage = () => {
 
       </div>
 
-      {model && <ProjectModel/>}
+      {model && <ModelBox/>}
 
 <div className="cta-section">
         <div className="cta-content">
@@ -104,4 +90,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage; 
+export default ModelPage; 

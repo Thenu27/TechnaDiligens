@@ -23,6 +23,11 @@ const Navbar = () => {
     window.scrollTo(0,0)
   }
 
+    const goToModels = ()=>{
+    navigate('/model');
+    window.scrollTo(0,0)
+  }
+
   const goToContact=()=>{
     navigate('/contact')
         window.scrollTo(0,0)
@@ -62,7 +67,7 @@ const Navbar = () => {
           <li className="nav-item"><a  onClick={() => {setMenuOpen(false),goToHome()}}>Home</a></li>
           <li className="nav-item"><a  onClick={() => {setMenuOpen(false), goToServices()}}>Services</a></li>
           <li className="nav-item"><a  onClick={() => {setMenuOpen(false), goToProjects()}}>Work</a></li>
-          
+          <li className="nav-item"><a  onClick={() => {setMenuOpen(false), goToModels()}}>3D Models</a></li>          
           <li className="nav-item"><a   onClick={() => {setMenuOpen(false), goToContact()}}>Contact</a></li>
         </ul>
       </div>

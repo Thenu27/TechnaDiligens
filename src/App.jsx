@@ -8,6 +8,7 @@ import Navbar from './components/NavBar/NavBar';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import Footer from './components/Footer/Footer';
+import ModelPage from './pages/ModelPage/ModelPage';
 
 const App = () => {
   useEffect(() => {
@@ -40,6 +41,8 @@ const App = () => {
         <Route path='/services' element={<ServicesPage/>}/>
         <Route path='/work' element={<ProjectsPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
+        <Route path='/model' element={<ModelPage/>}/>
+
       </Routes>
       <Footer/>
     </div>

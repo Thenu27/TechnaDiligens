@@ -119,7 +119,6 @@ body {
 
 .featured-projects{
     margin-top: -40px;
-    border: 1px solid white;
     padding: 10px;
     display: flex;
     flex-direction: row;
