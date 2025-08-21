@@ -28,7 +28,7 @@ const LaptopExperience=()=>{
             }}
         >
           <LaptopModel/>  
-          <OrbitControls/>
+          {/* <OrbitControls/> */}
           <ambientLight
             intensity={2}
           />
