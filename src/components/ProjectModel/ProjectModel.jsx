@@ -42,6 +42,17 @@ import { ModelContext } from '../../Context/ModelContext';
   toolsUsed: ['Figma', 'React', 'CSS3', 'Adobe Photoshop', 'Unsplash', 'Responsive Design'],
   image: "/TravelJaya.png",
   link: "https://traveljayasl.com"
+},
+
+{
+  id: 5,
+  title: "Environmental Engineer",
+  category: "Portfolio",
+  description: "A showcase portfolio highlighting expertise in environmental engineering, focusing on sustainability, eco-friendly project designs, and environmental impact assessments. Built to present professional achievements in a clean, engaging way.",
+  details: "This portfolio emphasizes clarity, structured presentation, and visual storytelling to communicate professional skills effectively. It highlights real-world environmental projects, sustainable solutions, and analytical expertise through a polished design. Using tools like Figma for layout planning and React for development, the site is fully responsive, ensuring accessibility across devices. Visuals were carefully curated and enhanced to reflect professionalism and credibility, while the navigation flow was designed for ease of use by employers, clients, and stakeholders.",
+  toolsUsed: ['Figma', 'React', 'CSS3', 'Adobe Photoshop', 'Responsive Design'],
+  image: "/Navin-portfolio.png",
+  // link: "#"
 }
   ];
 

@@ -35,13 +35,19 @@ const ProjectsPage = () => {
       description: "A comprehensive financial management system with real-time analytics and predictive insights.",
       image: "/RealEstate.png",
     },
-
         {
       id: 4,
       title: "Travel Jaya",
       category: "Travel Agency Website",
       description: "A comprehensive financial management system with real-time analytics and predictive insights.",
       image: "/TravelJaya.png",
+    },
+    {
+      id: 5,
+      title: "Portfolio",
+      category: "Environmental Engineer",
+      description: "A professional portfolio showcasing expertise in sustainable design, environmental impact assessments, and innovative engineering solutions for eco-friendly development.",
+      image: "/Navin-portfolio.png",
     }
   ];
 

@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Hero.css';
+import LaptopExperience from '../../LaptopExperience/LaptopExperience';
 
 const Hero = () => {
   useEffect(() => {
@@ -87,11 +88,12 @@ const Hero = () => {
 
 
   return (
-    <section id="home" className="hero">
-      <canvas id="particle-canvas"></canvas>
+    <div className='hero-section'>
+     <canvas id="particle-canvas"></canvas>
+     <section id="home" className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1>
+          <h1 className='hero-title'>
             <span className="gradient-text">Transforming</span> Ideas Into
             <span className="gradient-text"> Digital Reality</span>
           </h1>
@@ -102,7 +104,13 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+      <div className='laptop-hero-experience'>
+          <LaptopExperience/>
+      </div>
+      </section>
+    </div>
+
+   
   );
 };
 
