@@ -34,9 +34,9 @@ const LaptopModel = () => {
   return(
     <Float 
       speed={3}
-      floatIntensity={4}
+      floatIntensity={3}
     >
-        <primitive scale={1.6} position={[-0.5,1,0]} object={scene} />;
+        <primitive scale={1.6} position={[-0.5,1,0]} object={scene} />
     </Float>
   )
   
