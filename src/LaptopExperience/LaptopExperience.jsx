@@ -17,7 +17,7 @@ const LaptopExperience=()=>{
         
         <Canvas
         camera={{ 
-            position: [0, 0, 6],
+            position: [-0.5,1,6.5],
             fov: 75,
             near: 0.1,
             far: 200 }}
